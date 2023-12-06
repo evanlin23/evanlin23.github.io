@@ -1,0 +1,36 @@
+body {
+  margin: 40px auto;
+  max-width: 650px;
+  line-height: 1.6;
+  font-size: 18px;
+  color: #444;
+  padding: 0 10px;
+}
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+#typingEffect::after {
+  content: "";
+  width: 1px;
+  height: 16px;
+  background: black;
+  opacity: 0;
+  display: inline-block;
+  animation: blink 1s linear infinite alternate;
+  margin-left: 1px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-80%);
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
