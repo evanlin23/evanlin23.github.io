@@ -27,24 +27,7 @@ h3 {
 }
 
 .typingEffect {
-  padding-bottom: 50px;
-}
-.header-content {
-  display: flex;
-  flex-direction: row;
-  align-items: center; 
-  justify-content: space-between;
-}
-
-.left-side-header-content {
-  margin-right: 20px; 
-  width: 400px;
-}
-
-.right-side-header-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding-bottom: 25px;
 }
 
 @keyframes blink {
@@ -55,4 +38,29 @@ h3 {
   50% {
     opacity: 0;
   }
+}
+
+.header-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  justify-content: space-between;
+}
+
+.left-side-header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-right: 20px; 
+  width: 400px;
+}
+
+.right-side-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: #444;
+  border-left-style: solid;
+  padding-left: 10px;
 }
