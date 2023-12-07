@@ -24,6 +24,24 @@ h3 {
   line-height: 1.2;
 }
 
+.heading-text-highlight0::after,
+.heading-text-highlight1::after,
+.heading-text-highlight2::after,
+.heading-text-highlight3::after,
+.heading-text-highlight4::after {
+  content: "";
+  width: 1px;
+  height: 26px;
+  background: var(--heading-color);
+  opacity: 0;
+  display: inline-block;
+  animation: blink 1s linear infinite alternate;
+  margin-left: 3px;
+  position: relative;
+  top: 50%;
+  transform: translateY(10%);
+}
+
 #typingEffect::after {
   content: "";
   width: 1px;
