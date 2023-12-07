@@ -1,13 +1,25 @@
+:root {
+  --text-color:#c0c5d4;
+  --heading-color: #EFF1F3;
+  --background-color: #020B22;
+  --neon-text-color: #CFFF04;
+}
+
 body {
   margin: 40px auto;
   max-width: 650px;
   line-height: 1.6;
   font-size: 18px;
-  color: #444;
+  color: var(--text-color);
   padding: 0 10px;
+  background-color: var(--background-color);
 }
+
 h1,
-h2,
+h2 {
+  line-height: 1.2;
+  color: var(--heading-color);
+}
 h3 {
   line-height: 1.2;
 }
@@ -16,7 +28,7 @@ h3 {
   content: "";
   width: 1px;
   height: 16px;
-  background: black;
+  background: var(--neon-text-color);
   opacity: 0;
   display: inline-block;
   animation: blink 1s linear infinite alternate;
@@ -26,7 +38,8 @@ h3 {
   transform: translateY(-80%);
 }
 
-.typingEffect {
+#typingEffect {
+  color: var(--neon-text-color);
   padding-bottom: 25px;
 }
 
@@ -60,7 +73,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-left: #444;
+  border-left: var(--text-color);
   border-left-style: solid;
   padding-left: 10px;
   padding-top: 7px;
