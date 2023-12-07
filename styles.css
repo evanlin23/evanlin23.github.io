@@ -40,7 +40,6 @@ h3 {
 
 #typingEffect {
   color: var(--neon-text-color);
-  padding-bottom: 25px;
 }
 
 @keyframes blink {
