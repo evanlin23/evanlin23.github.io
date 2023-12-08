@@ -1,4 +1,4 @@
-const typingEffect = {
+const typingEffectLoop = {
   textArray: [
     "student",
     "archer",
@@ -60,9 +60,8 @@ function TypingEffect(className, heading) {
   this.speed = 100;
 
   this.type = function (className, heading) {
-    const headingText = document.querySelector(`.${className}`);
+    const headingText = document.getElementById(className);
     this.textArray = Array.isArray(heading) ? heading : [heading];
-
     this.addLetters(headingText);
   };
 
@@ -81,39 +80,39 @@ function TypingEffect(className, heading) {
   };
 }
 
+const idDictionary = {
+  "heading-text-highlight0": "Education",
+  "heading-text-highlight1": "Hey, this is what I've been up to",
+  "heading-text-highlight2": "Some interesting activities",
+  "heading-text-highlight3": "Recognitions I'm proud of",
+  "heading-text-highlight4": "Memories of the past",
+};
+
+function handleIntersection(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const typingEffectHeading = new TypingEffect(entry.target.id, [
+        idDictionary[entry.target.id],
+      ]);
+      typingEffectHeading.type(entry.target.id, [
+        idDictionary[entry.target.id],
+      ]);
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
 window.onload = function () {
-  typingEffect.type();
+  typingEffectLoop.type();
 
-  const typingEffectHeading1 = new TypingEffect("heading-text-highlight0", [
-    "Education",
-  ]);
-  typingEffectHeading1.type("heading-text-highlight0", ["Education"]);
+  const options = {
+    root: null,
+    threshold: 0.5,
+  };
 
-  const typingEffectHeading2 = new TypingEffect("heading-text-highlight1", [
-    "Hey, this is what I've been up to",
-  ]);
-  typingEffectHeading2.type("heading-text-highlight1", [
-    "Hey, this is what I've been up to",
-  ]);
-
-  const typingEffectHeading3 = new TypingEffect("heading-text-highlight2", [
-    "Some interesting activities",
-  ]);
-  typingEffectHeading3.type("heading-text-highlight2", [
-    "Some interesting activities",
-  ]);
-
-  const typingEffectHeading4 = new TypingEffect("heading-text-highlight3", [
-    "Recognitions I'm proud of",
-  ]);
-  typingEffectHeading4.type("heading-text-highlight3", [
-    "Recognitions I'm proud of",
-  ]);
-
-  const typingEffectHeading5 = new TypingEffect("heading-text-highlight4", [
-    "Memories of the past",
-  ]);
-  typingEffectHeading5.type("heading-text-highlight4", [
-    "Memories of the past",
-  ]);
+  Object.keys(idDictionary).forEach((id) => {
+    const target = document.querySelector(`#${id}`);
+    const observer = new IntersectionObserver(handleIntersection, options);
+    observer.observe(target);
+  });
 };

@@ -24,11 +24,11 @@ h3 {
   line-height: 1.2;
 }
 
-.heading-text-highlight0::after,
-.heading-text-highlight1::after,
-.heading-text-highlight2::after,
-.heading-text-highlight3::after,
-.heading-text-highlight4::after {
+#heading-text-highlight0::after,
+#heading-text-highlight1::after,
+#heading-text-highlight2::after,
+#heading-text-highlight3::after,
+#heading-text-highlight4::after {
   content: "";
   width: 1px;
   height: 26px;
@@ -96,3 +96,4 @@ h3 {
   padding-top: 7px;
   padding-bottom: 7px;
 }
+
