@@ -67,8 +67,10 @@ function TypingEffect(className, heading) {
 
   this.addLetters = function (headingText) {
     const currentText = this.textArray[this.index];
-    this.text = currentText.substring(0, this.text.length + 1);
-    this.updateText(headingText);
+    if (this.text.length < currentText.length) {
+      this.text = currentText.substring(0, this.text.length + 1);
+      this.updateText(headingText);
+    }
   };
 
   this.updateText = function (headingText) {
@@ -76,7 +78,9 @@ function TypingEffect(className, heading) {
     if (this.text === this.textArray[this.index]) {
       this.index = (this.index + 1) % this.textArray.length;
     }
-    setTimeout(() => this.addLetters(headingText), this.speed);
+    if (this.text.length < this.textArray[this.index].length) {
+      setTimeout(() => this.addLetters(headingText), this.speed);
+    }
   };
 }
 
