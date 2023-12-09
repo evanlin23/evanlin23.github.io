@@ -54,7 +54,7 @@ const typingEffectLoop = {
   },
 };
 
-function TypingEffect(className, heading) {
+function TypingEffectHeading(className, heading) {
   this.index = 0;
   this.text = "";
   this.speed = 100;
@@ -95,7 +95,7 @@ const idDictionary = {
 function handleIntersection(entries, observer) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      const typingEffectHeading = new TypingEffect(entry.target.id, [
+      const typingEffectHeading = new TypingEffectHeading(entry.target.id, [
         idDictionary[entry.target.id],
       ]);
       typingEffectHeading.type(entry.target.id, [
