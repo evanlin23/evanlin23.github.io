@@ -85,11 +85,11 @@ function TypingEffectHeading(className, heading) {
 }
 
 const idDictionary = {
-  "heading-text-highlight0": "Education",
-  "heading-text-highlight1": "Hey, this is what I've been up to",
-  "heading-text-highlight2": "Some interesting activities",
-  "heading-text-highlight3": "Recognitions I'm proud of",
-  "heading-text-highlight4": "Memories of the past",
+  "heading-text-highlight0": "Education...",
+  "heading-text-highlight1": "Hey, this is what I've been up to...",
+  "heading-text-highlight2": "Some interesting activities...",
+  "heading-text-highlight3": "Recognitions I'm proud of...",
+  "heading-text-highlight4": "Memories of the past...",
 };
 
 function handleIntersection(entries, observer) {
