@@ -113,17 +113,17 @@ h3 {
 .slide-in-left {
   opacity: 0;
   transform: translateX(-100%);
-  transition: opacity 0.5s, transform 0.5s;
+  transition: opacity 0.5s, transform 1.5s;
 }
 
 .slide-in-left.active {
   opacity: 1;
   transform: translateX(0);
-  transition: opacity 0.5s, transform 1s;
+  transition: opacity 0.5s, transform 1.5s;
 }
 
 .slide-in-left.slide-out {
   opacity: 0;
   transform: translateX(100%);
-  transition: opacity 0.5s, transform 1s; 
+  transition: opacity 0.5s, transform 1.5s; 
 }

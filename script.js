@@ -1,1 +1,160 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('w C(1I,1z){3 1O=y();z C=w(H,4b){H=H-1q;1X 1K=1O[H];z 1K},C(1I,1z)}3 4=C;(w(1H,1T){3 b=C,r=1H();28(!![]){27{3 1A=-c(b(25))/o+-c(b(2m))/1j*(c(b(2c))/2z)+c(b(2H))/2I+-c(b(2G))/2F*(-c(b(2E))/2C)+c(b(2B))/2A+c(b(2y))/2p*(-c(b(2x))/2w)+c(b(2r))/2q;U(1A===1T)2f;1y r[\'1J\'](r[\'21\']())}2g(2l){r[\'1J\'](r[\'21\']())}}}(y,22));3 1G={\'L\':[4(2o),4(2s),4(2D),\'2n\\24\',4(26),4(29),\'2a\'],\'s\':k,\'Y\':![],\'f\':\'\',\'R\':17,\'T\':()=>{3 K=4;!2[K(t)]?2[K(J)]():2[K(2b)]()},\'1C\':()=>{3 D=4,20=2[D(l)][2[\'s\']];2[D(9)]=20[\'1c\'](k,2[D(9)][D(i)]+o),2[\'I\']()},\'1W\':()=>{3 q=4,1Z=2[\'L\'][2[q(h)]];2[q(9)]=1Z[q(1n)](k,2[q(9)][q(i)]-o),2[\'I\']()},\'I\':()=>{3 6=4;n[6(13)](6(2i))[\'18\']=\'<G>\'+2[\'f\']+6(2j);1X A=2[6(O)];2[6(t)]&&(A/=1.5);U(!2[6(t)]&&2[6(9)]===2[6(l)][2[6(h)]])A=2v,2[6(t)]=!![];1y 2[6(t)]&&2[6(9)]===\'\'&&(2[\'Y\']=![],2[6(h)]=(2[6(h)]+o)%2[6(l)][6(i)],A=2k);1b(2[6(V)][\'2h\'](2),A)}},15=(2e,2d)=>{3 e=4;2[e(h)]=k,2[\'f\']=\'\',2[e(O)]=17,2[e(V)]=(16,F)=>{3 v=e,1w=n[v(13)](16);2[v(l)]=2t[v(2u)](F)?F:[F],2[v(J)](1w)},2[e(J)]=1v=>{3 a=e,X=2[a(l)][2[a(h)]];2[a(9)][a(i)]<X[a(i)]&&(2[a(9)]=X[a(1n)](k,2[a(9)][a(i)]+o),2[a(1e)](1v))},2[e(1e)]=W=>{3 8=e;W[\'18\']=8(23)+2[8(9)]+\'</G>\',2[8(9)]===2[8(l)][2[8(h)]]&&(2[8(h)]=(2[\'s\']+o)%2[\'L\'][\'12\']),2[8(9)][8(i)]<2[8(l)][2[\'s\']][8(i)]&&1b(()=>2[8(J)](W),2[8(O)])}},E={\'B-f-2K\':\'37...\',\'B-f-3O\':4(3N),\'B-f-3M\':4(3L),\'B-f-3K\':\'3J\\1B\\3I\\3H\\1Y...\',\'B-f-3G\':4(3E)},1P=(1a,19)=>{3 11=4;1a[11(1h)](m=>{3 p=11;U(m[p(3v)]){3 14=1N 15(m[p(10)][\'M\'],[E[m[\'P\'][\'M\']]]);14[\'T\'](m[p(10)][\'M\'],[E[m[p(10)][\'M\']]]),19[p(3D)](m[\'P\'])}})},3C=1s=>{3 d=4;3B u=1s[d(1q)]();z u[d(3A)]>=k&&u[d(3z)]>=k&&u[d(3y)]<=(j[d(1i)]||n[d(3x)][d(N)])&&u[d(3w)]<=(j[\'2J\']||n[\'1D\'][d(3Q)])},1F=()=>{3 x=4,1o=n[x(3R)](x(40));1o[x(1h)](g=>{3 7=x,1k=j[7(1m)]+j[7(1i)]-g[7(N)]/1j,1g=g[7(1l)]+g[7(N)],1p=1k>g[7(1l)],Q=j[7(1m)]>1g;1p&&!Q?(g[\'S\'][7(1f)](7(1u)),g[7(1r)][7(1t)](7(1d))):(g[7(1r)][7(1t)](7(1u)),Q&&g[\'S\'][7(1f)](7(1d)));});};w y(){3 1E=[\'1V\',\'12\',\'</G>\',\'4a\\49\\48...\',\'47\',\'f\',\'46\',\'45\',\'1c\',\'44\',\'43\',\'T\',\'42\',\'3S\\41\',\'3Z\',\'3Y\',\'3X\\1Y\\3W\\3V...\',\'R\\3U\',\'<G>\',\'3T\',\'S\',\'3F\',\'3u\',\'L\',\'R\',\'3t\',\'3s\\34\\33\',\'32\',\'31\',\'30\',\'2Z\',\'2Y\',\'P\',\'2X\',\'s\',\'1W\',\'.1U-2W-1V\',\'2U\',\'2L\',\'2T,\\2S\\2R\\2Q\\1B\\2P\\2O\\2N\\2M...\',\'1C\',\'1U-35\',\'2V\',\'36\',\'3i\',\'3r\',\'3q\',\'Y\',\'3p\',\'I\',\'1D\',\'3o\',\'3n\',\'3m\',\'3l\',\'3k\',\'1L\',\'3j\'];y=w(){z 1E;};z y();}j[\'3h\'](4(38),1F),j[\'3g\']=()=>{3 Z=4;1G[Z(V)]();3 1Q={\'3f\':3e,\'3d\':0.5};3c[\'3b\'](E)[\'1L\'](1M=>{3 1S=Z,1x=n[\'3a\'](\'#\'+1M),1R=1N 39(1P,1Q);1R[1S(3P)](1x)})};',62,260,'||this|const|_0x1d3ca9||_0x2ff0a8|_0x26638a|_0xffcd25|0x14b|_0x390a6f|_0xb8b589|parseInt|_0x831576|_0x359535|text|_0x28394b|0x12e|0x147|window|0x0|0x15d|_0xd2f5e9|document|0x1|_0x5a7116|_0x15b92d|_0xfff71d|index|0x13b|_0x30bf56|_0x545152|function|_0x5f3d3b|_0x3b51|return|_0x49a75a|heading|_0x4e25|_0x42c055|idDictionary|_0x44ca0e|span|_0x4e25aa|updateText|0x134|_0x5cb0b4|textArray|id|0x154|0x15e|target|_0x4d377a|speed|classList|type|if|0x151|_0x441d06|_0x372227|isDeleting|_0x516780|0x12c|_0x27893d|length|0x137|_0x265795|TypingEffectHeading|_0xf8eeef|0x64|innerHTML|_0x493bec|_0x49e97a|setTimeout|substring|0x135|0x13d|0x132|_0x103549|0x144|0x131|0x2|_0x2b0396|0x159|0x14c|0x14e|_0x111e02|_0x328cb5|0x127|0x15a|_0x46a608|0x155|0x12a|_0xcd0ee0|_0x1e3a9f|_0x18d7ef|else|_0x268f85|_0x94ed36|x20I|addLetters|documentElement|_0x54252b|checkSlide|typingEffectLoop|_0x2b45d7|_0x323271|push|_0x1d33cc|forEach|_0xb71a9|new|_0x3b5151|handleIntersection|_0x3166c2|_0x277b8f|_0xa90f59|_0x5b0593|slide|left|removeLetters|let|x20of|_0x5836c9|_0x1d727e|shift|0x414ef|0x158|x20master|0x141|0x153|try|while|0x157|brother|0x12f|0x136|_0xe439e2|_0x2dfa15|break|catch|bind|0x15b|0x148|0x1f4|_0x17d253|0x12b|lego|0x142|0x8|0xa|0x140|0x150|Array|0x13a|0x7d0|0x9|0x129|0x138|0x3|0x7|0x13f|0x6|0x160|0x13c|0x5|0x143|0x14a|0x4|innerWidth|highlight0|add|x20to|x20up|x20been|x27ve|x20what|x20is|x20this|Hey|innerHeight|17709fPpMgg|in|unobserve|142zTQUOM|active|3296115CrYvHw|clientWidth|getBoundingClientRect|x20researcher|x20security|out|getElementById|Education|0x14f|IntersectionObserver|querySelector|keys|Object|threshold|null|root|onload|addEventListener|8ptVHnL|right|45NfGTCN|student|316017tnpbvz|7659390IxVpNN|1251453PreHnv|67902FOTLyE|isArray|top|cyber|bottom|observe|0x152|0x145|0x13e|0x15f|0x146|0x139|var|isElementInViewport|0x12d|0x156|typingEffect|highlight4|x20proud|x27m|Recognitions|highlight3|0x149|highlight2|0x133|highlight1|0x15c|0x128|0x14d|software|offsetTop|x20cuber|x20past|x20the|Memories|remove|clientHeight|0x130|x20engineer|isIntersecting|archer|scroll|querySelectorAll|scrollY|1289188sHdyOk|x20activities|x20interesting|Some|_0x2ede19'.split('|'),0,{}))
+const typingEffectLoop = {
+  textArray: [
+    "student",
+    "archer",
+    "cyber security researcher",
+    "lego master",
+    "software engineer",
+    "speed cuber",
+    "brother",
+  ],
+
+  index: 0,
+  isDeleting: false,
+  text: "",
+  speed: 100,
+
+  type: function () {
+    if (!this.isDeleting) {
+      this.addLetters();
+    } else {
+      this.removeLetters();
+    }
+  },
+
+  addLetters: function () {
+    const currentText = this.textArray[this.index];
+    this.text = currentText.substring(0, this.text.length + 1);
+    this.updateText();
+  },
+
+  removeLetters: function () {
+    const currentText = this.textArray[this.index];
+    this.text = currentText.substring(0, this.text.length - 1);
+    this.updateText();
+  },
+
+  updateText: function () {
+    document.getElementById(
+      "typingEffect"
+    ).innerHTML = `<span>${this.text}</span>`;
+    let delta = this.speed;
+    if (this.isDeleting) {
+      delta /= 1.5;
+    }
+    if (!this.isDeleting && this.text === this.textArray[this.index]) {
+      delta = 2000;
+      this.isDeleting = true;
+    } else if (this.isDeleting && this.text === "") {
+      this.isDeleting = false;
+      this.index = (this.index + 1) % this.textArray.length;
+      delta = 500;
+    }
+    setTimeout(this.type.bind(this), delta);
+  },
+};
+
+function TypingEffectHeading(className, heading) {
+  this.index = 0;
+  this.text = "";
+  this.speed = 100;
+
+  this.type = function (className, heading) {
+    const headingText = document.getElementById(className);
+    this.textArray = Array.isArray(heading) ? heading : [heading];
+    this.addLetters(headingText);
+  };
+
+  this.addLetters = function (headingText) {
+    const currentText = this.textArray[this.index];
+    if (this.text.length < currentText.length) {
+      this.text = currentText.substring(0, this.text.length + 1);
+      this.updateText(headingText);
+    }
+  };
+
+  this.updateText = function (headingText) {
+    headingText.innerHTML = `<span>${this.text}</span>`;
+    if (this.text === this.textArray[this.index]) {
+      this.index = (this.index + 1) % this.textArray.length;
+    }
+    if (this.text.length < this.textArray[this.index].length) {
+      setTimeout(() => this.addLetters(headingText), this.speed);
+    }
+  };
+}
+
+const idDictionary = {
+  "heading-text-highlight0": "Education...",
+  "heading-text-highlight1": "Hey, this is what I've been up to...",
+  "heading-text-highlight2": "Some interesting activities...",
+  "heading-text-highlight3": "Recognitions I'm proud of...",
+  "heading-text-highlight4": "Memories of the past...",
+};
+
+function handleIntersection(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const typingEffectHeading = new TypingEffectHeading(entry.target.id, [
+        idDictionary[entry.target.id],
+      ]);
+      typingEffectHeading.type(entry.target.id, [
+        idDictionary[entry.target.id],
+      ]);
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+window.onload = function () {
+  typingEffectLoop.type();
+
+  const options = {
+    root: null,
+    threshold: 0.5,
+  };
+
+  Object.keys(idDictionary).forEach((id) => {
+    const target = document.querySelector(`#${id}`);
+    const observer = new IntersectionObserver(handleIntersection, options);
+    observer.observe(target);
+  });
+
+  checkSlide();
+};
+
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function checkSlide() {
+  const sections = document.querySelectorAll(".slide-in-left");
+
+  sections.forEach((section) => {
+    const slideInAt =
+      window.scrollY + window.innerHeight - section.clientHeight / 2;
+    const slideOutAt = section.offsetTop + section.clientHeight;
+
+    const isHalfShown = slideInAt > section.offsetTop;
+    const isScrolledPast = window.scrollY > slideOutAt;
+
+    if (isHalfShown && !isScrolledPast) {
+      section.classList.add("active");
+      section.classList.remove("slide-out");
+    } else {
+      section.classList.remove("active");
+      if (isScrolledPast) {
+        section.classList.add("slide-out");
+      }
+    }
+  });
+}
+
+window.addEventListener("scroll", checkSlide);
