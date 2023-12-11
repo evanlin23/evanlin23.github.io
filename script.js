@@ -138,8 +138,7 @@ function checkSlide() {
   const sections = document.querySelectorAll(".slide-in-left");
 
   sections.forEach((section) => {
-    const slideInAt =
-      window.scrollY + window.innerHeight - section.clientHeight * 0.1;
+    const slideInAt = window.scrollY + window.innerHeight;
     const slideOutAt = section.offsetTop + section.clientHeight;
 
     const isHalfShown = slideInAt > section.offsetTop;
