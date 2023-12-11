@@ -42,6 +42,19 @@ h3 {
   transform: translateY(10%);
 }
 
+#left-side-header-top {
+  display: flex;
+  flex-direction: row;
+}
+
+#profile-image {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 #typingEffect::after {
   content: "";
   width: 1px;
@@ -97,3 +110,20 @@ h3 {
   padding-bottom: 7px;
 }
 
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.slide-in-left.active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.5s, transform 1s;
+}
+
+.slide-in-left.slide-out {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.5s, transform 1s; 
+}
