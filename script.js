@@ -141,10 +141,10 @@ function checkSlide() {
     const slideInAt = window.scrollY + window.innerHeight;
     const slideOutAt = section.offsetTop + section.clientHeight;
 
-    const isHalfShown = slideInAt > section.offsetTop;
+    const isStartShown = slideInAt > section.offsetTop;
     const isScrolledPast = window.scrollY > slideOutAt;
 
-    if (isHalfShown && !isScrolledPast) {
+    if (isStartShown && !isScrolledPast) {
       section.classList.add("active");
       section.classList.remove("slide-out");
     } else {
@@ -157,3 +157,33 @@ function checkSlide() {
 }
 
 window.addEventListener("scroll", checkSlide);
+
+// By Hyperplexed
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+let interval = null;
+
+document.querySelector("h1").onmouseover = (event) => {
+  let iteration = 0;
+
+  clearInterval(interval);
+
+  interval = setInterval(() => {
+    event.target.innerText = event.target.innerText
+      .split("")
+      .map((letter, index) => {
+        if (index < iteration) {
+          return event.target.dataset.value[index];
+        }
+
+        return letters[Math.floor(Math.random() * 26)];
+      })
+      .join("");
+
+    if (iteration >= event.target.dataset.value.length) {
+      clearInterval(interval);
+    }
+
+    iteration += 1 / 3;
+  }, 30);
+};
