@@ -1,163 +1,147 @@
-const typingEffectLoop = {
-  textArray: [
+const typingEffect = {
+  phrases: [
     "student",
-    "archer",
-    "cyber security researcher",
-    "lego master",
-    "software engineer",
-    "speed cuber",
-    "brother",
+    "security researcher",
+    "software developer",
   ],
-
-  index: 0,
+  typingSpeed: 100,
+  deletingSpeed: 70,
+  pauseBeforeDelete: 2000,
+  pauseBeforeNextPhrase: 500,
+  
+  currentIndex: 0,
   isDeleting: false,
-  text: "",
-  speed: 100,
-
-  type: function () {
-    if (!this.isDeleting) {
-      this.addLetters();
-    } else {
-      this.removeLetters();
-    }
+  currentText: "",
+  element: null,
+  
+  init() {
+    this.element = document.getElementById("typingEffect");
+    if (!this.element) return;
+    this.type();
   },
-
-  addLetters: function () {
-    const currentText = this.textArray[this.index];
-    this.text = currentText.substring(0, this.text.length + 1);
-    this.updateText();
-  },
-
-  removeLetters: function () {
-    const currentText = this.textArray[this.index];
-    this.text = currentText.substring(0, this.text.length - 1);
-    this.updateText();
-  },
-
-  updateText: function () {
-    document.getElementById(
-      "typingEffect"
-    ).innerHTML = `<span>${this.text}</span>`;
-    let delta = this.speed;
+  
+  type() {
+    const currentPhrase = this.phrases[this.currentIndex];
+    
     if (this.isDeleting) {
-      delta /= 1.5;
+      this.currentText = currentPhrase.substring(0, this.currentText.length - 1);
+    } else {
+      this.currentText = currentPhrase.substring(0, this.currentText.length + 1);
     }
-    if (!this.isDeleting && this.text === this.textArray[this.index]) {
-      delta = 2000;
+    
+    this.element.innerHTML = `<span>${this.currentText}</span>`;
+    let typingSpeed = this.isDeleting ? this.deletingSpeed : this.typingSpeed;
+    
+    if (!this.isDeleting && this.currentText === currentPhrase) {
+      typingSpeed = this.pauseBeforeDelete;
       this.isDeleting = true;
-    } else if (this.isDeleting && this.text === "") {
+    } else if (this.isDeleting && this.currentText === "") {
       this.isDeleting = false;
-      this.index = (this.index + 1) % this.textArray.length;
-      delta = 500;
+      this.currentIndex = (this.currentIndex + 1) % this.phrases.length;
+      typingSpeed = this.pauseBeforeNextPhrase;
     }
-    setTimeout(this.type.bind(this), delta);
+    
+    setTimeout(() => this.type(), typingSpeed);
+  }
+};
+
+const headingAnimations = {
+  headings: {
+    "heading-text-highlight0": "Education...",
+    "heading-text-highlight1": "Hey, this is what I've been up to...",
+    "heading-text-highlight2": "Some interesting activities...",
+    "heading-text-highlight3": "Recognitions I'm proud of...",
+    "heading-text-highlight4": "Memories of the past...",
   },
+  typingSpeed: 100,
+  observerThreshold: 0.5,
+  
+  init() {
+    this.setupObservers();
+  },
+  
+  setupObservers() {
+    const observerOptions = {
+      root: null,
+      threshold: this.observerThreshold,
+    };
+    
+    Object.keys(this.headings).forEach(id => {
+      const element = document.getElementById(id);
+      if (!element) return;
+      
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.animateHeading(entry.target.id, this.headings[entry.target.id]);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      observer.observe(element);
+    });
+  },
+  
+  animateHeading(elementId, text) {
+    const element = document.getElementById(elementId);
+    if (!element) return;
+    
+    let displayedText = "";
+    let charIndex = 0;
+    
+    const typeNextChar = () => {
+      if (charIndex < text.length) {
+        displayedText += text.charAt(charIndex);
+        element.innerHTML = `<span>${displayedText}</span>`;
+        charIndex++;
+        setTimeout(typeNextChar, this.typingSpeed);
+      }
+    };
+    
+    typeNextChar();
+  }
 };
 
-function TypingEffectHeading(className, heading) {
-  this.index = 0;
-  this.text = "";
-  this.speed = 100;
-
-  this.type = function (className, heading) {
-    const headingText = document.getElementById(className);
-    this.textArray = Array.isArray(heading) ? heading : [heading];
-    this.addLetters(headingText);
-  };
-
-  this.addLetters = function (headingText) {
-    const currentText = this.textArray[this.index];
-    if (this.text.length < currentText.length) {
-      this.text = currentText.substring(0, this.text.length + 1);
-      this.updateText(headingText);
-    }
-  };
-
-  this.updateText = function (headingText) {
-    headingText.innerHTML = `<span>${this.text}</span>`;
-    if (this.text === this.textArray[this.index]) {
-      this.index = (this.index + 1) % this.textArray.length;
-    }
-    if (this.text.length < this.textArray[this.index].length) {
-      setTimeout(() => this.addLetters(headingText), this.speed);
-    }
-  };
-}
-
-const idDictionary = {
-  "heading-text-highlight0": "Education...",
-  "heading-text-highlight1": "Hey, this is what I've been up to...",
-  "heading-text-highlight2": "Some interesting activities...",
-  "heading-text-highlight3": "Recognitions I'm proud of...",
-  "heading-text-highlight4": "Memories of the past...",
+const textScramble = {
+  letters: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  speed: 30,
+  iterationIncrement: 1/3,
+  
+  init() {
+    const mainTitle = document.querySelector("h1");
+    if (!mainTitle) return;
+    
+    mainTitle.addEventListener("mouseover", event => this.scramble(event));
+  },
+  
+  scramble(event) {
+    let iteration = 0;
+    const originalText = event.target.dataset.value;
+    clearInterval(this.interval);
+    
+    this.interval = setInterval(() => {
+      event.target.innerText = event.target.innerText
+        .split("")
+        .map((letter, index) => {
+          if (index < iteration) {
+            return originalText[index];
+          }
+          return this.letters[Math.floor(Math.random() * this.letters.length)];
+        })
+        .join("");
+      
+      if (iteration >= originalText.length) {
+        clearInterval(this.interval);
+      }
+      
+      iteration += this.iterationIncrement;
+    }, this.speed);
+  }
 };
 
-function handleIntersection(entries, observer) {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      const typingEffectHeading = new TypingEffectHeading(entry.target.id, [
-        idDictionary[entry.target.id],
-      ]);
-      typingEffectHeading.type(entry.target.id, [
-        idDictionary[entry.target.id],
-      ]);
-      observer.unobserve(entry.target);
-    }
-  });
-}
-
-window.onload = function () {
-  typingEffectLoop.type();
-
-  const options = {
-    root: null,
-    threshold: 0.5,
-  };
-
-  Object.keys(idDictionary).forEach((id) => {
-    const target = document.querySelector(`#${id}`);
-    const observer = new IntersectionObserver(handleIntersection, options);
-    observer.observe(target);
-  });
-};
-
-function isElementInViewport(el) {
-  var rect = el.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
-
-// By Hyperplexed
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-let interval = null;
-
-document.querySelector("h1").onmouseover = (event) => {
-  let iteration = 0;
-
-  clearInterval(interval);
-
-  interval = setInterval(() => {
-    event.target.innerText = event.target.innerText
-      .split("")
-      .map((letter, index) => {
-        if (index < iteration) {
-          return event.target.dataset.value[index];
-        }
-
-        return letters[Math.floor(Math.random() * 26)];
-      })
-      .join("");
-
-    if (iteration >= event.target.dataset.value.length) {
-      clearInterval(interval);
-    }
-
-    iteration += 1 / 3;
-  }, 30);
-};
+document.addEventListener("DOMContentLoaded", () => {
+  typingEffect.init();
+  headingAnimations.init();
+  textScramble.init();
+});
