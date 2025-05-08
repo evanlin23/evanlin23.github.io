@@ -119,8 +119,6 @@ window.onload = function () {
     const observer = new IntersectionObserver(handleIntersection, options);
     observer.observe(target);
   });
-
-  checkSlide();
 };
 
 function isElementInViewport(el) {
@@ -133,30 +131,6 @@ function isElementInViewport(el) {
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 }
-
-function checkSlide() {
-  const sections = document.querySelectorAll(".slide-in-left");
-
-  sections.forEach((section) => {
-    const slideInAt = window.scrollY + window.innerHeight;
-    const slideOutAt = section.offsetTop + section.clientHeight;
-
-    const isStartShown = slideInAt > section.offsetTop;
-    const isScrolledPast = window.scrollY > slideOutAt;
-
-    if (isStartShown && !isScrolledPast) {
-      section.classList.add("active");
-      section.classList.remove("slide-out");
-    } else {
-      section.classList.remove("active");
-      if (isScrolledPast) {
-        section.classList.add("slide-out");
-      }
-    }
-  });
-}
-
-window.addEventListener("scroll", checkSlide);
 
 // By Hyperplexed
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";

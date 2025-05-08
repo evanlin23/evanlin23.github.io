@@ -1,8 +1,8 @@
 :root {
-  --text-color:#c0c5d4;
-  --heading-color: #EFF1F3;
-  --background-color: #020B22;
-  --neon-text-color: #CFFF04;
+  --text-color:#99a1af;
+  --heading-color: #e5e7eb;
+  --background-color: #101828;
+  --neon-text-color: #05df72;
 }
 
 body {
@@ -109,22 +109,4 @@ h3 {
   padding-left: 10px;
   padding-top: 7px;
   padding-bottom: 7px;
-}
-
-.slide-in-left {
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: opacity 0.5s, transform 1.5s;
-}
-
-.slide-in-left.active {
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity 0.5s, transform 1.5s;
-}
-
-.slide-in-left.slide-out {
-  opacity: 0;
-  transform: translateX(100%);
-  transition: opacity 0.5s, transform 1.5s; 
 }
