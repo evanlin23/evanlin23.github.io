@@ -1,3 +1,3 @@
 # evanlin23.github.io
 
-Inspired by [this site](http://bettermotherfuckingwebsite.com/)
+Source for my personal website: https://evanlin23.github.io
