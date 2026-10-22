@@ -75,41 +75,20 @@ h2 {
   font-weight: 700;
 }
 
-.timeline,
-.timeline ul {
+.timeline {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* Each year is a row: big year on the left, that year's entries on the right. */
-.timeline > li {
-  display: grid;
-  grid-template-columns: 5.5rem 1fr;
-  gap: 0 16px;
-  padding: 20px 0;
+.timeline li {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0;
   border-top: 1px solid var(--rule);
 }
 
-.year {
-  font-size: 1.75rem;
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  font-variant-numeric: tabular-nums;
-  color: var(--accent);
-}
-
-.timeline ul li {
-  display: flex;
-  flex-direction: column;
-}
-
-.timeline ul li + li {
-  margin-top: 18px;
-}
-
-.timeline ul div {
+.timeline div {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -139,12 +118,7 @@ h2 {
     font-size: 2.25rem;
   }
 
-  .timeline > li {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-
-  .timeline ul div {
+  .timeline div {
     flex-direction: column;
   }
 }
